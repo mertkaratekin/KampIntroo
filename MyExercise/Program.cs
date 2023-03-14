@@ -18,10 +18,13 @@ namespace MyExercise
                 otogazAkaryakitManager };
             List<ILoggerManager> loggers = new List<ILoggerManager>() {databaseLoggerManager,fileLoggerManager,otomasyonLoggerManager };
             OperationManager operationManager = new OperationManager();
-            operationManager.YakitAl(motorinAkaryakitManager,otomasyonLoggerManager);
             
-
             operationManager.BilgiAl(akaryakits);
+            operationManager.LogBilgiAl(loggers);
+
+            Console.WriteLine("****************************");
+            operationManager.YakitAl(kursunsuzAkaryakitManager,databaseLoggerManager);
+
         }
     }
 }

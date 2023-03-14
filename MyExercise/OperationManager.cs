@@ -21,5 +21,12 @@ namespace MyExercise
                 
             }
         }
+        public void LogBilgiAl(List<ILoggerManager> loggers) 
+        {
+            foreach (var logger in loggers)
+            {
+                logger.Log();
+            }
+        }
     }
 }
