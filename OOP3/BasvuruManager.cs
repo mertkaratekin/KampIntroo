@@ -22,5 +22,13 @@ namespace OOP3
                 kredi.Hesapla();
             }
         }
+        public void LogBilgi(List<ILoggerService> loggers)
+        {
+            foreach (var logger in loggers)
+            {
+                logger.Log();
+
+            }
+        }
     }
 }
